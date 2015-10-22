@@ -1,0 +1,35 @@
+{
+  "name": "react-fader",
+  "version": "0.0.1",
+  "description": "A fader component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:lib && npm run build:dist",
+    "build:lib": "babel src/react-fader.jsx -o lib/react-fader.js --stage=0",
+    "build:dist": "webpack",
+    "dev": "node script/dev.js && webpack-dev-server --content-base tmp --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rumtraubenuss/react-fader.git"
+  },
+  "author": "Bastian Schade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rumtraubenuss/react-fader/issues"
+  },
+  "homepage": "https://github.com/rumtraubenuss/react-fader",
+  "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "babel-runtime": "^5.8.25",
+    "fs-sync": "^1.0.0",
+    "path": "^0.12.7",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "react": "^0.14.0"
+  }
+}

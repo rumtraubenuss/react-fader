@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Fader</title>
+</head>
+<body>
+<script src="https://fb.me/react-0.14.0.js"></script>
+<script src="https://fb.me/react-dom-0.14.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.js"></script>
+<script src="../dist/react-fader.js"></script>
+<script type="text/babel">
+  const inititalVal = 0;
+  const App = React.createClass({
+    getInitialState: function() {
+      return {currentVal: inititalVal}
+    },
+
+    handleChange: function(newVal) {
+      this.setState({currentVal: newVal});
+    },
+
+    render: function() {
+      return (
+        <div>
+          <div>Current value: {this.state.currentVal}</div>
+          <Fader valInit={inititalVal} handleChange={this.handleChange} />
+        </div>
+      );
+    }
+  });
+  ReactDOM.render(<App/>, document.getElementById('app'));
+</script>
+<div id="app"></div>
+</body>
+</html>
