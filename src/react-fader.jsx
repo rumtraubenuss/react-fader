@@ -44,7 +44,7 @@ class Fader extends Component {
   calcMax() {
     const r = this.refs;
     const left = 0;
-    const right = r.container.clientWidth - r.handle.getBBox().width;
+    const right = r.container.getBBox().width - r.handle.getBBox().width;
     return [left, right];
   }
 
