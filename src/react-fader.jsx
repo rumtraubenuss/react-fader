@@ -92,7 +92,7 @@ class Fader extends Component {
     const _stylesHandle = Object.assign({}, stylesHandle, {transform: `translate(${this.state.translateX}px)`});
     return (
       <svg ref="container" style={stylesSVG} xmlns="http://www.w3.org/2000/svg">
-        <line x1="0" y1="10" x2={this.state.fullWidth} y2="10" stroke="black" strokeDasharray="3, 5" strokeWidth="1"/>
+        <line x1="0" y1="10" x2={this.state.fullWidth} y2="10" stroke="black" strokeDasharray="1, 5" strokeWidth="4"/>
         <rect ref="handle"
           style={_stylesHandle}
           onMouseDown={this.handleDownHandle}
