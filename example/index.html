@@ -5,12 +5,19 @@
   <title>Fader</title>
 </head>
 <body>
+<style>
+  body {
+    font-family: 'Verdana', sans-serif;
+    font-size: 12px;
+    padding: 2em;
+  }
+</style>
 <script src="https://fb.me/react-0.14.0.js"></script>
 <script src="https://fb.me/react-dom-0.14.0.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.25/browser.js"></script>
 <script src="../dist/react-fader.js"></script>
 <script type="text/babel">
-  const inititalVal = 0;
+  const inititalVal = .5;
   const App = React.createClass({
     getInitialState: function() {
       return {currentVal: inititalVal}
@@ -23,7 +30,7 @@
     render: function() {
       return (
         <div>
-          <div>Current value: {this.state.currentVal}</div>
+          <p>Current value: {this.state.currentVal}</p>
           <Fader valInit={inititalVal} handleChange={this.handleChange} />
         </div>
       );
